@@ -22,7 +22,7 @@ export function getArch(): string {
   // wants amd64, 386, arm64, armv61, ppc641e, s390x
   // currently not supported by runner but future proofed mapping
   switch (arch) {
-    case 'x64':
+    case 'x86':
       arch = 'amd64';
       break;
     // case 'ppc':
