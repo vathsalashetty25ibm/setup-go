@@ -8,8 +8,8 @@ export function getPlatform(): string {
   let plat: string = os.platform();
 
   // wants 'darwin', 'freebsd', 'linux', 'windows'
-  if (plat === 'win32') {
-    plat = 'windows';
+  if (plat === 'linux') {
+    plat = 'linux';
   }
 
   return plat;
@@ -25,9 +25,9 @@ export function getArch(): string {
     case 'x86':
       arch = 'amd64';
       break;
-    // case 'ppc':
-    //   arch = 'ppc64';
-    //   break;
+    case 'ppc':
+    arch = 'ppc64';
+    break;
     case 'x32':
       arch = '386';
       break;
